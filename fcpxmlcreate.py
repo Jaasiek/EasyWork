@@ -1,25 +1,9 @@
 import xml.etree.ElementTree as ET
 
-# root = ET.Element("fcpxml", version="1.0")
-# project = ET.SubElement(root, "project")
-# resources = ET.SubElement(project, "resources")
-# format = ET.SubElement(
-#     resources, "format", id="r1", frameDuration="100/2997s", width="1920", height="1080"
-# )
-# clip = ET.SubElement(project, "clip", name="example", format="f1", duration="100/2997s")
-
-# ET.indent(root, space="  ", level=0)
-
-# print(ET.tostring(root, encoding="unicode", method="xml"))
-
-
 library_location = "library location"
 event_name = "event_name"
 name = "project name"
 
-# root_early_news = ET.Element("?xml", version="1.0", encoding="UTF-8" "?")
-# doctype_early_news = ET.Element(root_early_news)
-# doctype_early_news.text = "!DOCTYPE fcpxml"
 fcpxml_root_early_news = ET.Element("fcpxml", version="1.10")
 resources_early_news = ET.SubElement(fcpxml_root_early_news, "resources")
 format_early_news = ET.SubElement(
@@ -273,6 +257,12 @@ match_ratings1_smart_collection4_early_news = ET.SubElement(
     smart_collection5_early_news, "match-ratings", value="favourites"
 )
 
-ET.indent(fcpxml_root_early_news, space="  ", level=0)
+header = '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE fcpxml>\n'
 
-print(ET.tostring(fcpxml_root_early_news, encoding="unicode", method="xml"))
+ET.indent(fcpxml_root_early_news, space="  ", level=1)
+
+fcpxml_string_early_news = ET.tostring(fcpxml_root_early_news, encoding="unicode")
+
+fcpxml_early_news = header + fcpxml_string_early_news
+
+
