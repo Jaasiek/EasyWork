@@ -191,7 +191,7 @@ def today_news_fcpxml():
     "keyword",
     start="0s",
     duration="9700/2500s",
-    value="wipe early",
+    value="wipe today",
 )
     marker_asset_clip_today_news = ET.SubElement(
     asset_clip1_today_news,
@@ -215,7 +215,7 @@ def today_news_fcpxml():
     "keyword",
     start="0s",
     duration="7600/2500s",
-    value="wipe early",
+    value="wipe today",
 )
     marker_asset_clip2_today_news = ET.SubElement(
     asset_clip2_today_news,
