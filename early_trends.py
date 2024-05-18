@@ -153,7 +153,7 @@ def early_trends_fcpxml():
     event_early_trends,
     "project",
     name=f"{name}",
-    uid="3FC36AED-8DF9-4638-8DE5-8785932D7A0A",
+    uid="2669DB4B-5924-4234-AB77-64EBA81ACB55",
     modDate="2024-04-06 20:14:03 +0200",
 )
     sequence_early_trends = ET.SubElement(
