@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-def today_news_fcpxml():
+def today_news_fcpxml(file):
     library_location = "library location"
     event_name = "event_name"
     name = "project name"
@@ -265,3 +265,5 @@ def today_news_fcpxml():
     fcpxml_string_today_news = ET.tostring(fcpxml_root_today_news, encoding="unicode")
 
     fcpxml_today_news = header + fcpxml_string_today_news
+
+    file.write(fcpxml_today_news)

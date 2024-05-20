@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-def early_trends_fcpxml():
+def early_trends_fcpxml(file):
     library_location = "library location"
     event_name = "event_name"
     name = "project name"
@@ -265,3 +265,5 @@ def early_trends_fcpxml():
     fcpxml_string_early_trends = ET.tostring(fcpxml_root_early_trends, encoding="unicode")
 
     fcpxml_early_trends = header + fcpxml_string_early_trends
+
+    file.write(fcpxml_early_trends)
