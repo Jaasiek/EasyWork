@@ -1,9 +1,6 @@
 import xml.etree.ElementTree as ET
 
-def early_trends_fcpxml(file):
-    library_location = "library location"
-    event_name = "event_name"
-    name = "project name"
+def early_trends_fcpxml(file, library_location, event_name, name):
 
     fcpxml_root_early_trends = ET.Element("fcpxml", version="1.10")
     resources_early_trends = ET.SubElement(fcpxml_root_early_trends, "resources")
