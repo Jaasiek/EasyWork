@@ -12,13 +12,13 @@ from functions.tonight_talks import tonight_talks_fcpxml
 from functions.tonight_trends import tonight_trends_fcpxml
 
 # Inputs
-# fcpx_library = input(
-# "\nPodaj ściężkę do swojej biblioteki FCPX (przeciągnij do terminala): "
-# )
-# fcpx_library = fcpx_library.strip("'")
+fcpx_library = input(
+    "\nPodaj ściężkę do swojej biblioteki FCPX (przeciągnij do terminala): "
+)
+fcpx_library = fcpx_library.strip("'")
 csv_path = input("Podaj lokalizację pliku CSV (przeciągnąć plik do terminala): ")
 csv_path = csv_path.strip("'")
-# event_name = input("Podaj nazwę eventu, do którego chcesz przypisać dane projekty: ")
+event = input("Podaj nazwę eventu, do którego chcesz przypisać dane projekty: ")
 
 # CSV read and modification
 df = pd.read_csv(f"{csv_path}", sep=";")
@@ -35,7 +35,6 @@ print(file_names, len(file_names))
 
 # Creating files
 
-
 # Od 8 do 15 będziemy używać WIPE EARLY
 # Od 15 do 20 WIPE TODAY
 # Od 20 do 24 WIPE TONIGHT
@@ -44,22 +43,30 @@ print(file_names, len(file_names))
 for file in file_names:
     if 80000 <= emmision_hours[file_names.index(file)] < 150000:
         if "News" in program_name[file_names.index(file)]:
-            pass
+            early_news_fcpxml(file, fcpx_library, event)
+
         if "Talks" in program_name[file_names.index(file)]:
-            pass
+            early_talks_fcpxml(file, fcpx_library, event)
+
         if "Trends" in program_name[file_names.index(file)]:
-            pass
+            early_trends_fcpxml(file, fcpx_library, event)
+
     elif 150000 <= emmision_hours[file_names.index(file)] < 200000:
         if "News" in program_name[file_names.index(file)]:
-            pass
+            today_news_fcpxml(file, fcpx_library, event)
+
         if "Talks" in program_name[file_names.index(file)]:
-            pass
+            today_talks_fcpxml(file, fcpx_library, event)
+
         if "Trends" in program_name[file_names.index(file)]:
-            pass
+            today_trends_fcpxml(file, fcpx_library, event)
+
     elif 200000 <= emmision_hours[file_names.index(file)] < 240000:
         if "News" in program_name[file_names.index(file)]:
-            pass
+            tonight_news_fcpxml(file, fcpx_library, event)
+
         if "Talks" in program_name[file_names.index(file)]:
-            pass
+            tonight_talks_fcpxml(file, fcpx_library, event)
+
         if "Trends" in program_name[file_names.index(file)]:
-            pass
+            tonight_trends_fcpxml(file, fcpx_library, event)
