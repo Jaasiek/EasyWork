@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 
 
-def early_trends_fcpxml(file, library_location, event_name):
+def early_trends_fcpxml(file, library_location, event_name, path):
 
     fcpxml_root_early_trends = ET.Element("fcpxml", version="1.10")
     resources_early_trends = ET.SubElement(fcpxml_root_early_trends, "resources")
@@ -274,4 +274,8 @@ def early_trends_fcpxml(file, library_location, event_name):
 
     fcpxml_early_trends = header + fcpxml_string_early_trends
 
-    file.write(fcpxml_early_trends)
+    file_path = f"{path}/{file}.fcpxml"
+
+    with open(file_path, "w") as handle:
+        handle.write(fcpxml_early_trends)
+

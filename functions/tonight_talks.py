@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 
 
-def tonight_talks_fcpxml(file, library_location, event_name):
+def tonight_talks_fcpxml(file, library_location, event_name, path):
 
     fcpxml_root_tonight_talks = ET.Element("fcpxml", version="1.10")
     resources_tonight_talks = ET.SubElement(fcpxml_root_tonight_talks, "resources")
@@ -276,4 +276,8 @@ def tonight_talks_fcpxml(file, library_location, event_name):
 
     fcpxml_tonight_talks = header + fcpxml_string_tonight_talks
 
-    file.write(fcpxml_tonight_talks)
+    file_path = f"{path}/{file}.fcpxml"
+
+    with open(file_path, "w") as handle:
+        handle.write(fcpxml_tonight_talks)
+
