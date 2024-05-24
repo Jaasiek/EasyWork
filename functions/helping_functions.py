@@ -21,3 +21,6 @@ def remove_elements(input_list):
         ):
             filtered_list.append(x)
     return filtered_list
+
+
+# Copyright ® 2024  Jasiek Gawlak

@@ -18,7 +18,9 @@ fcpx_library = input(
 fcpx_library = fcpx_library.strip("'")
 csv_path = input("Podaj lokalizację pliku CSV (przeciągnąć plik do terminala): ")
 csv_path = csv_path.strip("'")
-destination_path = input("Podaj lokalizacje folderu docelowego (przeciągnij do terminala): ")
+destination_path = input(
+    "Podaj lokalizacje folderu docelowego (przeciągnij do terminala): "
+)
 destination_path = destination_path.strip("'")
 event = input("Podaj nazwę eventu, do którego chcesz przypisać dane projekty: ")
 
@@ -78,3 +80,4 @@ print(
 )
 print("Copyright ® 2024 Jasiek Gawlak")
 
+# Copyright ® 2024  Jasiek Gawlak

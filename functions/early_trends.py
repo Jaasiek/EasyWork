@@ -273,9 +273,8 @@ def early_trends_fcpxml(file, library_location, event_name, path):
     )
 
     fcpxml_early_trends = header + fcpxml_string_early_trends
-
     file_path = f"{path}/{file}.fcpxml"
-
     with open(file_path, "w") as handle:
         handle.write(fcpxml_early_trends)
 
+    # Copyright ® 2024  Jasiek Gawlak

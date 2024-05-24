@@ -281,3 +281,5 @@ def tonight_talks_fcpxml(file, library_location, event_name, path):
     with open(file_path, "w") as handle:
         handle.write(fcpxml_tonight_talks)
 
+
+# Copyright ® 2024  Jasiek Gawlak

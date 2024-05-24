@@ -279,3 +279,5 @@ def today_trends_fcpxml(file, library_location, event_name, path):
     with open(file_path, "w") as handle:
         handle.write(fcpxml_today_trends)
 
+
+# Copyright ® 2024  Jasiek Gawlak
