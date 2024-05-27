@@ -10,6 +10,7 @@ from functions.today_trends import today_trends_fcpxml
 from functions.tonight_news import tonight_news_fcpxml
 from functions.tonight_talks import tonight_talks_fcpxml
 from functions.tonight_trends import tonight_trends_fcpxml
+from functions.deafult import deafult_fcpxml
 
 fcpx_library = input(
     "\nPodaj ściężkę do swojej biblioteki FCPX (przeciągnij do terminala): "
@@ -32,6 +33,7 @@ hours_int = [convert_to_int(hour) for hour in emmision_hours]
 emmision_hours = emmision_hours = [convert_to_int(hour) for hour in emmision_hours]
 
 for file in file_names:
+
     if 80000 <= emmision_hours[file_names.index(file)] < 150000:
         if "News" in program_name[file_names.index(file)]:
             early_news_fcpxml(file, fcpx_library, event, destination_path)
@@ -61,6 +63,9 @@ for file in file_names:
 
         if "Trends" in program_name[file_names.index(file)]:
             tonight_trends_fcpxml(file, fcpx_library, event, destination_path)
+
+    else:
+        deafult_fcpxml(file, fcpx_library, event, destination_path)
 
 print(
     f"\nUtworzono {len(file_names)} plików.fcpxml\nZostały utworzone w folderze: {destination_path} \nZ pliku {csv_path}\n"
