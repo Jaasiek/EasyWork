@@ -38,37 +38,43 @@ for file in file_names:
         if "News" in program_name[file_names.index(file)]:
             early_news_fcpxml(file, fcpx_library, event, destination_path)
 
-        if "Talks" in program_name[file_names.index(file)]:
+        elif "Talks" in program_name[file_names.index(file)]:
             early_talks_fcpxml(file, fcpx_library, event, destination_path)
 
-        if "Trends" in program_name[file_names.index(file)]:
+        elif "Trends" in program_name[file_names.index(file)]:
             early_trends_fcpxml(file, fcpx_library, event, destination_path)
+        else:
+            deafult_fcpxml(file, fcpx_library, event, destination_path)
 
     elif 150000 <= emmision_hours[file_names.index(file)] < 200000:
         if "News" in program_name[file_names.index(file)]:
             today_news_fcpxml(file, fcpx_library, event, destination_path)
 
-        if "Talks" in program_name[file_names.index(file)]:
+        elif "Talks" in program_name[file_names.index(file)]:
             today_talks_fcpxml(file, fcpx_library, event, destination_path)
 
-        if "Trends" in program_name[file_names.index(file)]:
+        elif "Trends" in program_name[file_names.index(file)]:
             today_trends_fcpxml(file, fcpx_library, event, destination_path)
+        else:
+            deafult_fcpxml(file, fcpx_library, event, destination_path)
 
     elif 200000 <= emmision_hours[file_names.index(file)] < 240000:
         if "News" in program_name[file_names.index(file)]:
             tonight_news_fcpxml(file, fcpx_library, event, destination_path)
 
-        if "Talks" in program_name[file_names.index(file)]:
+        elif "Talks" in program_name[file_names.index(file)]:
             tonight_talks_fcpxml(file, fcpx_library, event, destination_path)
 
-        if "Trends" in program_name[file_names.index(file)]:
+        elif "Trends" in program_name[file_names.index(file)]:
             tonight_trends_fcpxml(file, fcpx_library, event, destination_path)
+        else:
+            deafult_fcpxml(file, fcpx_library, event, destination_path)
 
     else:
         deafult_fcpxml(file, fcpx_library, event, destination_path)
 
 print(
-    f"\nUtworzono {len(file_names)} plików.fcpxml\nZostały utworzone w folderze: {destination_path} \nZ pliku {csv_path}\n"
+    f"\nUtworzono {len(file_names)} plików.fcpxml\nZostały utworzone w folderze: {destination_path} \nZ pliku {csv_path}\nW plikach których nie zostały znalezione poszczególne nazwy został utworzyony domyślmny plik .fpcxml"
 )
 print("Copyright ® 2024 Jasiek Gawlak")
 
