@@ -74,7 +74,7 @@ def early_trends_fcpxml(file, library_location, event_name, path):
     string2_out_early_trends = ET.SubElement(array_md5_out_early_trends, "string")
     string2_out_early_trends.text = "Linear PCM"
     md6_out_early_trends = ET.SubElement(
-        asset_early_trends,
+        metadata_out_early_trends,
         "md",
         key="com.apple.proapps.mio.ingestDate",
         value="2024-03-13 20:20:41 +0100",
@@ -165,7 +165,7 @@ def early_trends_fcpxml(file, library_location, event_name, path):
     sequence_early_trends = ET.SubElement(
         project_early_trends,
         "sequence",
-        fomrat="r1",
+        format="r1",
         duration="17300/2500s",
         tcStart="0s",
         tcFormat="NDF",
@@ -258,10 +258,10 @@ def early_trends_fcpxml(file, library_location, event_name, path):
         smart_collection4_early_trends, "match-media", rule="is", type="stills"
     )
     smart_collection5_early_trends = ET.SubElement(
-        library_early_trends, "smart-collection", name="Favourites", match="all"
+        library_early_trends, "smart-collection", name="Favorites", match="all"
     )
     match_ratings1_smart_collection4_early_trends = ET.SubElement(
-        smart_collection5_early_trends, "match-ratings", value="favourites"
+        smart_collection5_early_trends, "match-ratings", value="favorites"
     )
 
     header = '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE fcpxml>\n'

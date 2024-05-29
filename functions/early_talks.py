@@ -74,7 +74,7 @@ def early_talks_fcpxml(file, library_location, event_name, path):
     string2_out_early_talks = ET.SubElement(array_md5_out_early_talks, "string")
     string2_out_early_talks.text = "Linear PCM"
     md6_out_early_talks = ET.SubElement(
-        asset_early_talks,
+        metadata_out_early_talks,
         "md",
         key="com.apple.proapps.mio.ingestDate",
         value="2024-03-13 20:20:41 +0100",
@@ -165,7 +165,7 @@ def early_talks_fcpxml(file, library_location, event_name, path):
     sequence_early_talks = ET.SubElement(
         project_early_talks,
         "sequence",
-        fomrat="r1",
+        format="r1",
         duration="17300/2500s",
         tcStart="0s",
         tcFormat="NDF",
@@ -258,10 +258,10 @@ def early_talks_fcpxml(file, library_location, event_name, path):
         smart_collection4_early_talks, "match-media", rule="is", type="stills"
     )
     smart_collection5_early_talks = ET.SubElement(
-        library_early_talks, "smart-collection", name="Favourites", match="all"
+        library_early_talks, "smart-collection", name="Favorites", match="all"
     )
     match_ratings1_smart_collection4_early_talks = ET.SubElement(
-        smart_collection5_early_talks, "match-ratings", value="favourites"
+        smart_collection5_early_talks, "match-ratings", value="favorites"
     )
 
     header = '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE fcpxml>\n'

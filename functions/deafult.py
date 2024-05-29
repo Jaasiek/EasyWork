@@ -69,10 +69,10 @@ def deafult_fcpxml(file, library_location, event_name, path):
         smart_4_deafult, "match-media", rule="is", type="stills"
     )
     smart_5_deafult = ET.SubElement(
-        library_location_deafult, "smart-collection", name="Favourites", match="all"
+        library_location_deafult, "smart-collection", name="Favorites", match="all"
     )
     match1_ratings_deafult = ET.SubElement(
-        smart_5_deafult, "match-ratings", value="favourites"
+        smart_5_deafult, "match-ratings", value="favorites"
     )
 
     header = '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE fcpxml>\n'

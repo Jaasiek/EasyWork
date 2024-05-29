@@ -76,7 +76,7 @@ def tonight_talks_fcpxml(file, library_location, event_name, path):
     string2_out_tonight_talks = ET.SubElement(array_md5_out_tonight_talks, "string")
     string2_out_tonight_talks.text = "Linear PCM"
     md6_out_tonight_talks = ET.SubElement(
-        asset_tonight_talks,
+        metadata_out_tonight_talks,
         "md",
         key="com.apple.proapps.mio.ingestDate",
         value="2024-03-13 16:29:08 +0100",
@@ -167,7 +167,7 @@ def tonight_talks_fcpxml(file, library_location, event_name, path):
     sequence_tonight_talks = ET.SubElement(
         project_tonight_talks,
         "sequence",
-        fomrat="r1",
+        format="r1",
         duration="17300/2500s",
         tcStart="0s",
         tcFormat="NDF",
@@ -260,10 +260,10 @@ def tonight_talks_fcpxml(file, library_location, event_name, path):
         smart_collection4_tonight_talks, "match-media", rule="is", type="stills"
     )
     smart_collection5_tonight_talks = ET.SubElement(
-        library_tonight_talks, "smart-collection", name="Favourites", match="all"
+        library_tonight_talks, "smart-collection", name="Favorites", match="all"
     )
     match_ratings1_smart_collection4_tonight_talks = ET.SubElement(
-        smart_collection5_tonight_talks, "match-ratings", value="favourites"
+        smart_collection5_tonight_talks, "match-ratings", value="favorites"
     )
 
     header = '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE fcpxml>\n'

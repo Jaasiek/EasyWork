@@ -74,7 +74,7 @@ def tonight_news_fcpxml(file, library_location, event_name, path):
     string2_out_tonight_news = ET.SubElement(array_md5_out_tonight_news, "string")
     string2_out_tonight_news.text = "Linear PCM"
     md6_out_tonight_news = ET.SubElement(
-        asset_tonight_news,
+        metadata_out_tonight_news,
         "md",
         key="com.apple.proapps.mio.ingestDate",
         value="2024-04-16 16:14:20 +0200",
@@ -165,7 +165,7 @@ def tonight_news_fcpxml(file, library_location, event_name, path):
     sequence_tonight_news = ET.SubElement(
         project_tonight_news,
         "sequence",
-        fomrat="r1",
+        format="r1",
         duration="17300/2500s",
         tcStart="0s",
         tcFormat="NDF",
@@ -258,10 +258,10 @@ def tonight_news_fcpxml(file, library_location, event_name, path):
         smart_collection4_tonight_news, "match-media", rule="is", type="stills"
     )
     smart_collection5_tonight_news = ET.SubElement(
-        library_tonight_news, "smart-collection", name="Favourites", match="all"
+        library_tonight_news, "smart-collection", name="Favorites", match="all"
     )
     match_ratings1_smart_collection4_tonight_news = ET.SubElement(
-        smart_collection5_tonight_news, "match-ratings", value="favourites"
+        smart_collection5_tonight_news, "match-ratings", value="favorites"
     )
 
     header = '<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE fcpxml>\n'
