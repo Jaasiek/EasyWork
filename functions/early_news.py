@@ -68,7 +68,7 @@ def early_news_fcpxml(file, library_location, event_name, path):
     md5_out_early_news = ET.SubElement(
         metadata_out_early_news, "md", key="com.apple.proapps.spotlight.kMDItemCodecs"
     )
-    array_md5_out_early_news = ET.SubElement(md5_out_early_news, "array")
+    array_md5_out_early_news = ET.SubElement(array_md5_out_early_news, "array")
     string1_out_early_news = ET.SubElement(array_md5_out_early_news, "string")
     string1_out_early_news.text = "Apple ProRes 4444"
     string2_out_early_news = ET.SubElement(array_md5_out_early_news, "string")
