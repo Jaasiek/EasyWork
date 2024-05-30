@@ -12,7 +12,7 @@ def deafult_fcpxml(file, library_location, event_name, path):
         frameDuration="100/2500s",
         width="1920",
         height="1080",
-        colorSpaces="1-1-1 (Rec. 709)",
+        colorSpace="1-1-1 (Rec. 709)",
     )
     library_location_deafult = ET.SubElement(
         fcpxml_root_deafult, "library", location=f"{library_location}"
