@@ -137,7 +137,7 @@ def today_news_fcpxml(file, library_location, event_name, path):
     array_md5_in_today_news = ET.SubElement(md5_in_today_news, "array")
     string1_in_today_news = ET.SubElement(array_md5_in_today_news, "string")
     string1_in_today_news.text = "Apple ProRes 4444"
-    string2_in_today_news = ET.SubElement(md5_in_today_news, "string")
+    string2_in_today_news = ET.SubElement(array_md5_in_today_news, "string")
     string2_in_today_news.text = "Linear PCM"
     md6_in_today_news = ET.SubElement(
         metadata_in_today_news,
