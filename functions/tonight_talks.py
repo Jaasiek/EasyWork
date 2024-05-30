@@ -139,7 +139,7 @@ def tonight_talks_fcpxml(file, library_location, event_name, path):
     array_md5_in_tonight_talks = ET.SubElement(md5_in_tonight_talks, "array")
     string1_in_tonight_talks = ET.SubElement(array_md5_in_tonight_talks, "string")
     string1_in_tonight_talks.text = "Apple ProRes 4444"
-    string2_in_tonight_talks = ET.SubElement(md5_in_tonight_talks, "string")
+    string2_in_tonight_talks = ET.SubElement(array_md5_in_tonight_talks, "string")
     string2_in_tonight_talks.text = "Linear PCM"
     md6_in_tonight_talks = ET.SubElement(
         metadata_in_tonight_talks,
