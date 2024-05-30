@@ -137,7 +137,7 @@ def early_trends_fcpxml(file, library_location, event_name, path):
     array_md5_in_early_trends = ET.SubElement(md5_in_early_trends, "array")
     string1_in_early_trends = ET.SubElement(array_md5_in_early_trends, "string")
     string1_in_early_trends.text = "Apple ProRes 4444"
-    string2_in_early_trends = ET.SubElement(md5_in_early_trends, "string")
+    string2_in_early_trends = ET.SubElement(array_md5_in_early_trends, "string")
     string2_in_early_trends.text = "Linear PCM"
     md6_in_early_trends = ET.SubElement(
         metadata_in_early_trends,
