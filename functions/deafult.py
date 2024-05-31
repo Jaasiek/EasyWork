@@ -45,7 +45,7 @@ def deafult_fcpxml(file, library_location, event_name, path):
         library_location_deafult, "smart-collection", name="Projects", match="all"
     )
     match1_clip_1_deafult = ET.SubElement(
-        smart_1_deafult, "match-clip", rule="is", type="videoOnly"
+        smart_1_deafult, "match-clip", rule="is", type="projects"
     )
     smart_2_deafult = ET.SubElement(
         library_location_deafult, "smart-collection", name="All Video", match="any"
