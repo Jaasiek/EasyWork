@@ -30,7 +30,7 @@ emmision_hours = remove_elements(df["GODZINA_EMISJI"].values.tolist())
 program_name = remove_elements(df["PROGRAM"].values.tolist())
 file_names = remove_elements(df["NAZWA_PLIKU"].values.tolist())
 hours_int = [convert_to_int(hour) for hour in emmision_hours]
-emmision_hours = emmision_hours = [convert_to_int(hour) for hour in emmision_hours]
+emmision_hours = [convert_to_int(hour) for hour in emmision_hours]
 
 for file in file_names:
 
