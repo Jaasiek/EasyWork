@@ -76,6 +76,6 @@ for file in file_names:
 print(
     f"\nUtworzono {len(file_names)} plików.fcpxml\nZostały utworzone w folderze: {destination_path} \nZ pliku {csv_path}\nW plikach których nie zostały znalezione poszczególne nazwy został utworzyony domyślny plik .fpcxml"
 )
-print("Copyright ® 2024 Jasiek Gawlak")
+print("\nCopyright ® 2024 Jasiek Gawlak\n")
 
 # Copyright ® 2024  Jasiek Gawlak
